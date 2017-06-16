@@ -45,7 +45,7 @@ e.g.
 
 ### Inspired From Laravel
 
-Since I've been coding on PHP/Laravel Apps for more then One and Half an Year, So it's natural that you'll see glitters of Laravel Inside.
+Since I've been coding in PHP/Laravel for more then One and Half an Year, So it's natural that you'll see glitters of Laravel Inside.
 
 
 ### Contact
