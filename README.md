@@ -7,7 +7,9 @@ This is my Python Boiler Plate for writing console apps.
 1. Clone this repository.
 2. Goto `config` directory rename `config.example.json` to `config.json`.
 3. Update `config/config.json`
-4. In Console run python main.py --app
+4. Add your arguments in `route/Router.py`
+5. Add your controller in `controller/` Directory.
+6. In Console run python main.py --app
 
 ### Reason for the Repository.
 
