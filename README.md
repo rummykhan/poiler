@@ -9,6 +9,7 @@ This is my Python Boiler Plate for writing console apps.
 3. Update `config/config.json`
 4. Add your arguments in `route/Router.py`
 5. Add your controller in `controller/` Directory.
+6. Add associations between routes and controller in `main.py`
 6. In Console run python main.py --app
 
 ### Reason for the Repository.
@@ -47,7 +48,7 @@ e.g.
 
 ### Inspired From Laravel
 
-Since I've been coding in PHP/Laravel for more then One and Half an Year, So it's natural that you'll see glitters of Laravel Inside.
+Since I've been coding in PHP/Laravel for more then one and half  years, So it's natural that you'll see glitters of Laravel Inside.
 
 
 ### Contact
