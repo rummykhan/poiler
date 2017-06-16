@@ -1,15 +1,31 @@
 import json
-import operator
 import os
 import re
 import string
 import sys
 from urllib.parse import urlparse
-
 from base.support import command
+
+r""" Provides Helper Method
+
+This module provide useful helper methods for the user.
+
+Provided Methods:
+    validate_url        Validate if the given string is a valid url.
+    get_url             Get the url from the user.
+    get_pure_ascii      Extract pure ascii from the string.
+    str_capitalize      Capitalize the string.
+    try_json            Try to convert the string to JSON.
+    change_title        Change title of the console window.
+"""
 
 
 def validate_url(val):
+    '''
+    Checks if the value is a valid url.
+    :param val:
+    :return:
+    '''
     if val is None:
         return False
 
@@ -24,39 +40,22 @@ def validate_url(val):
 
 
 def get_url():
+    '''
+    Get url from the User.
+    :return:
+    '''
     val = command.get_string_input('Enter URL :: ')
     if not validate_url(val):
         return get_url()
     return val
 
 
-def sort_locations(locations):
-    locations = sorted(locations.items(), key=operator.itemgetter(0))
-    most = locations[len(locations) - 1]
-    return most[1]['name']
-
-
-def purify_string(data):
-    if data is None:
-        return data
-
-    data = str(data)
-
-    data = get_pure_ascii(data)
-
-    if data is None:
-        return data
-
-    data = str_strip(data)
-
-    return data.replace('\n', '')
-
-
-def str_strip(data, to_strip=' '):
-    return data.strip(to_strip)
-
-
 def get_pure_ascii(data):
+    '''
+    Get pure ascii from the string.
+    :param data:
+    :return:
+    '''
     if data is None:
         return data
 
@@ -74,81 +73,24 @@ def get_pure_ascii(data):
     return None
 
 
-def get_pure_email(data):
-    if data is None:
-        return data
-
-    data = str_strip(data)
-    data = str_strip(data, ',')
-    data = data.lower()
-
-    return data
-
-
-def get_pure_phone(data):
-    if data is None:
-        return data
-
-    data = str(data)
-
-    data = str_strip(data)
-    data = data.replace(' ', '')
-    data = data.replace('-', '')
-    data = data.replace('(', '')
-    data = data.replace(')', '')
-
-    return check_plus_sign(data)
-
-
-def check_plus_sign(data):
-    index = -1
-    try:
-        index = data.index('+')
-    except:
-        index = -1
-
-    if index is -1:
-        return '+' + data
-
-
-def get_pure_amount(data):
-    if data is None:
-        return data
-
-    data = str(data)
-    data = str_strip(data)
-    data = data.replace(' ', '')
-    data = data.replace(',', '')
-
-    try:
-        return int(data)
-    except:
-        return 0
-
-
 def str_capitalize(data):
+    '''
+    Capitalize the string.
+    :param data:
+    :return:
+    '''
     if data is None:
         return data
 
     return string.capwords(data)
 
 
-def get_json(html):
-    if html is None:
-        return None
-
-    finder_text_start = '<script type="text/javascript">window._sharedData = '
-    finder_text_start_len = len(finder_text_start) - 1
-    finder_text_end = ';</script>'
-
-    all_data_start = html.find(finder_text_start)
-    all_data_end = html.find(finder_text_end, all_data_start + 1)
-    json_str = html[(all_data_start + finder_text_start_len + 1): all_data_end]
-
-    return try_json(json_str)
-
-
 def try_json(response):
+    '''
+    Try converting a string to JSON
+    :param response:
+    :return:
+    '''
     try:
         return json.loads(response)
     except:
@@ -156,6 +98,11 @@ def try_json(response):
 
 
 def change_title(title):
+    '''
+    Change title of the console.
+    :param title:
+    :return:
+    '''
     if 'linux' in sys.platform:
         command = '\x1b]2;' + title + '\x07'
         sys.stdout.write(command)
@@ -165,17 +112,3 @@ def change_title(title):
         command = 'TITLE %s' % str(title)
         os.system(command)
         return
-
-
-def get_summary(influencer):
-    if 'summaries' not in influencer:
-        return None
-
-    for summary in influencer['summaries']:
-        if 'channel' not in summary:
-            continue
-
-        if summary['channel'] == 'ednrd':
-            return summary
-
-    return None
