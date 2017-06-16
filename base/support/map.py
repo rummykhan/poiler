@@ -1,3 +1,23 @@
+r"""Provides support for Dictionary to access like Object
+
+This module Provides support for Dictionaries to be accessed like objects.
+
+e.g.
+
+person = {name: "rehan", age: 27, country: "Pakistan"}
+
+conventional way
+
+print(person['name'])
+
+My Way ;)
+
+person = Map(person)
+
+print(person.name)
+"""
+
+
 class Map(dict):
     def __init__(self, *args, **kwargs):
         super(Map, self).__init__(*args, **kwargs)

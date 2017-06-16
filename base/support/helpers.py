@@ -13,7 +13,6 @@ This module provide useful helper methods for the user.
 Provided Methods:
     validate_url        Validate if the given string is a valid url.
     get_url             Get the url from the user.
-    get_pure_ascii      Extract pure ascii from the string.
     str_capitalize      Capitalize the string.
     try_json            Try to convert the string to JSON.
     change_title        Change title of the console window.
@@ -48,29 +47,6 @@ def get_url():
     if not validate_url(val):
         return get_url()
     return val
-
-
-def get_pure_ascii(data):
-    '''
-    Get pure ascii from the string.
-    :param data:
-    :return:
-    '''
-    if data is None:
-        return data
-
-    p = re.compile('[\x00-\x7F]+')
-
-    results = re.findall(p, data)
-
-    output = ''
-    if len(results) > 0:
-        for result in results:
-            output += result
-
-        return output
-
-    return None
 
 
 def str_capitalize(data):

@@ -1,5 +1,19 @@
 import time
 
+r""" Provides Support for Time Manipulation
+
+This module helps in manipulating Time. This module is a wrapper over Python time Module.
+
+Public API
+    
+    All Methods listed below are static and since Python doesn't support Private Methods, So it is recommended to use only the Public API.
+    
+    current         Get the current Time.
+    sleep           Sleep the app for given time.
+    format          Format the linux epoch time to Given Format.
+    to_time         Convert a figurative string to Time. e.g. Time.to_time('- 1 months'), Time.to_time('- 1 years')
+"""
+
 
 class Time(object):
     @staticmethod
