@@ -17,7 +17,7 @@ I've added helpful classes in `base/support/` directory which I hope you'll find
 
 1. <a href="https://github.com/rummykhan/poiler/blob/master/base/support/collection.py">Collection (For Querying on List of Dictionary.)</a>
 2. <a href="https://github.com/rummykhan/poiler/blob/master/base/support/command.py">Command (For user interaction and priting.)</a>
-3. <a href="https://github.com/rummykhan/poiler/blob/master/base/support/dict.py">Dict (Walking recursively on a Dictionary.)</a>
+3. <a href="https://github.com/rummykhan/poiler/blob/master/base/support/dict.py">Dict (Walking recursively over a Dictionary.)</a>
 4. <a href="https://github.com/rummykhan/poiler/blob/master/base/support/map.py">Map (A Simple Dictionary To access Dictionary as Object e.g. `person.name`.)</a>
 5. <a href="https://github.com/rummykhan/poiler/blob/master/base/support/str.py">Str (Multiple String Helpers.)</a>
 6. <a href="https://github.com/rummykhan/poiler/blob/master/base/support/time.py">Time (A Complete Time Utility Inspired from Carbon.)</a>
