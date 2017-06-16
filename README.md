@@ -2,14 +2,14 @@
 
 This is my Python Boiler Plate for writing console apps.
 
-#### How To
+### How To
 
 1. Clone this repository.
 2. Goto `config` directory rename `config.example.json` to `config.json`.
 3. Update `config/config.json`
 4. In Console run python main.py --app
 
-#### Reason for the Repository.
+### Reason for the Repository.
 
 I've been writing lot of Python CLI apps for different purposes, each time I've to manually copy paste the boiler plate and carry on. So I thought of creating a repository. Maybe someday someone else would find it useful. 
 
@@ -25,14 +25,14 @@ I've added helpful classes in `base/support/` directory which I hope you'll find
 There is logger class for displaying log info on CLI, This logger class is somewhat similar to <a href="http://www.php-fig.org/psr/psr-3/">PSR-3 Logger</a>
 
 
-#### Easy Config
+### Easy Config
 Now you can specify your configuration in a JSON File. See <a href="https://github.com/rummykhan/poiler/blob/master/config/config.example.json">config.example.json</a>
 
 I've already included a <a href="https://github.com/rummykhan/poiler/blob/master/config/config.py">`Config Class`</a> in `config/` directory which will helps you to read JSON configuration files.
 
 This `Config Class` expose a static method `get(path)`. Which is pretty intelligent to read your configuration recursively.
 
-#### Not a framework
+### Not a framework
 
 This is not a python framework for writing console apps. There are already plenty of pretty amazing and popular framework outside.
 e.g.
@@ -43,10 +43,10 @@ e.g.
 5. <a href="https://pypi.python.org/pypi/plac">Plac</a>
 6. <a href="https://docs.openstack.org/developer/cliff/">Cliff</a>
 
-#### Inspired From Laravel
+### Inspired From Laravel
 
 Since I've been coding on PHP/Laravel Apps for more then One and Half an Year, So it's natural that you'll see glitters of Laravel Inside.
 
 
-#### Contact
+### Contact
 rehan_manzoor@outlook.com
