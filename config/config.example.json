@@ -1,0 +1,12 @@
+{
+  "database": {
+    "credentials": {
+      "host": "localhost",
+      "db": "database",
+      "username": "",
+      "password": ""
+    },
+    "cs": "mongodb://localhost:27017"
+  },
+  "app_name": "My Python Console App Boiler Plate"
+}
