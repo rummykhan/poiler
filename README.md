@@ -51,4 +51,4 @@ Since I've been coding in PHP/Laravel for more then One and Half an Year, So it'
 
 
 ### Contact
-rehan_manzoor@outlook.com
+[rehan_manzoor@outlook.com](mailto://rehan_manzoor@outlook.com)
